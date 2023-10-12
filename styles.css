@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900 bold;
+  font-size: 17px;
+  line-height: 1.4em;
+  background-color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+body > *:first-child {
+  margin-top: 0 !important;
+}
+
+body > *:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Smooth scrolling */
+@media screen and (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Links */
+a {
+  color: #3973ad;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #4183c4;
+}
+
+a.absent {
+  color: #cc0000;
+}
+
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+/* Headlines */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  line-height: 1.4em;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  color: #69bcab;
+  position: relative;
+}
+
+h1 tt,
+h1 code,
+h2 tt,
+h2 code,
+h3 tt,
+h3 code,
+h4 tt,
+h4 code,
+h5 tt,
+h5 code,
+h6 tt,
+h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 50px;
+  color: rgb(230, 115, 199);
+  text-align: center;
+  padding: 5px;
+  border-radius:5px;
+  display: inline;
+}
+
+h2 {
+  font-size: 50px;
+  border-bottom: 1px solid #86c076;
+  color: black;
+  padding: 5px;
+  border-radius:5px;
+  border: 3px solid black;
+  display: inline;
+}
+
+h3 {
+  font-size: 18px;
+  padding: 5px;
+  border-radius:5px;
+  border: 3px solid black;
+  display: inline;
+}
+
+h4 {
+  font-size: 16px;
+  padding: 5px;
+  border-radius:5px;
+  border: 3px solid black;
+  display: inline;
+}
+
+h5 {
+  font-size: 14px;
+  padding: 5px;
+  border-radius:5px;
+  border: 3px solid black;
+  display: inline;
+}
+
+h6 {
+  color: #777777;
+  font-size: 14px;
+  padding: 5px;
+  border-radius:5px;
+  border: 3px solid black;
+  display:inline;
+}
+
+/* Paragraphs, Blockquotes, Lists, Tables, Preformatted Text */
+p,
+blockquote,
+ul,
+ol,
+dl,
+li,
+table,
+pre {
+  margin: 15px 0;
+}
+
+ol li {
+  list-style-type: decimal;
+  margin-left: 20px; /* Adjust the margin as needed */
+}
+
+ul li::before {
+  margin-right: 5px;
+  background-color: rgb(187, 104, 243);
+  list-style-type: none !important;
+}
+
+/* Footnotes */
+a[href^="#fn:"]:after {
+  content: ")";
+  font-size: 0.83em;
+  vertical-align: super;
+  line-height: 0;
+}
+
+li:target {
+  background-color: #e8fef6;
+}
+
+/* Table of Contents */
+.TOC {
+  background: #f4f5f8 none repeat scroll 0 0;
+  border: 0px solid #aaa;
+  border-radius: 10px;
+  display: table;
+  font-size: 95%;
+  margin-bottom: 1em;
+  padding: 2px;
+  width: 100%;
+}
+
+.TOC li,
+.TOC ul,
+.TOC ul li {
+  list-style: decimal;
+}
