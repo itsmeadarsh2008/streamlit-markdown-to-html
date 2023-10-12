@@ -52,7 +52,6 @@ def main():
                     mime="text/html",
                     on_click=st.balloons,
                 )
-                st.button(f"Preview {uploaded_file.name.split('.')[0]}",type='primary')
         st.markdown('''
 ![Python](https://img.shields.io/badge/MADE%20WITH%20PYTHON-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
                     
