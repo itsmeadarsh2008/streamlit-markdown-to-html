@@ -1,8 +1,18 @@
 import streamlit as st
-import markdown
-btc_address = 'bc1q0v5a27rk7s8xq6wzv5zhkhau2swj88c8m4k6dl'
+from markdown_it import MarkdownIt
+from mdit_py_plugins.front_matter import front_matter_plugin
+from mdit_py_plugins.footnote import footnote_plugin
+
+md = (
+    MarkdownIt('commonmark', {'breaks': True, 'html': True})
+    .use(front_matter_plugin)
+    .use(footnote_plugin)
+    .enable('table')
+    .enable('strikethrough')  # Enable table support
+)
+
 def markdown_to_html(markdown_text, css_content):
-    html_content = markdown.markdown(markdown_text)
+    html_content = md.render(markdown_text)
     complete_html = f"""
     <!DOCTYPE html>
     <html lang="en">
@@ -14,14 +24,12 @@ def markdown_to_html(markdown_text, css_content):
             {css_content}
         </style>
     </head>
-    <body>
+    <body class="markdown-body">
         {html_content}
     </body>
     </html>
     """
     return complete_html
-
-
 # Read external CSS file
 with open("styles.css", "r", encoding="utf-8") as css_file:
     css_content = css_file.read()
